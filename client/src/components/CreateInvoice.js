@@ -111,31 +111,60 @@ export default class CreateInvoice extends Component {
             <thead>
               <tr>
                 <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
+                <th scope="col">Item ID</th>
+                <th scope="col">Description</th>
+                <th scope="col">Qty</th>
+                <th scope="col">Amount</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
+                <td>001</td>
+                <td>Fruit</td>
+                <td>100</td>
+                <td>300</td>
               </tr>
               <tr>
                 <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
+                <td>002</td>
+                <td>Vegetable</td>
+                <td>50</td>
+                <td>100</td>
               </tr>
               <tr>
                 <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
+                <td>003</td>
+                <td>Meat</td>
+                <td>500</td>
+                <td>900</td>
               </tr>
             </tbody>
           </table>
+          {/* Total Amount */}
+          <div className="form-group" style={{ marginBottom: "15px" }}>
+            <label style={{ marginBottom: "5px" }}> Total </label>
+            <input
+              type="text"
+              className="form-control"
+              name=" Invoice_Hed_Amount"
+              placeholder=""
+              value={this.state. Invoice_Hed_Amount}
+              onChange={this.handleInputChange}
+            />
+             <button className = "btn btn-outline-success" type = "submit" style = {{marginTop: '20px'}} onClick={this.onSubmit}>
+                 <i className = "far fa-check-square"></i>
+                 &nbsp;Proceed
+             </button>
+             &nbsp;
+
+             <button className = "btn btn-outline-secondary" type = "reset" style = {{marginTop: '20px'}} onClick={this.onClick}>
+             <i class="fa fa-eraser" aria-hidden="true"></i>
+                 &nbsp;  Clear
+             </button>
+          </div>
+
+         
         </form>
       </div>
     );

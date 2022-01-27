@@ -6,7 +6,7 @@ export default class Report extends Component {
     return(
      
       <div>
-         sknjsjReport
+         Generate Report
           
       </div>
       
